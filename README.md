@@ -2,9 +2,9 @@
 
 > This sample app demonstrate how to set up SonarQube with GitHub Actions for a Node.js project.
 > - We will be installing SonarQube on local machine.
-> - Install SonarScanner globally in local.
+> - Install SonarScanner globally in local machine.
 > - We will be using Self-Hosted GitHub Runner, which lets GitHub Actions use localhost to access your local SonarQube server. 
-    - Go to your GitHub repo: Settings → Actions → Runners → New self-hosted runner
+     Go to your GitHub repo: Settings → Actions → Runners → New self-hosted runner
 
 ## 🚨 Important: GitHub Actions Cannot Access Your Localhost
 
@@ -24,11 +24,11 @@
   -   Name: SONAR_TOKEN
   -   value: your generated token
   -   Name: SONAR_HOST_URL
-  -   value: use http://localhost:9000
+  -   value: use https://your-sonarqube-server.com
 - Create a file called sonar-project.properties and keep it in root of project:
   ```bash
     sonar.projectKey=<YOUR_PROJECT_KEY>
-    sonar.host.url=http://localhost:9000
+    sonar.host.url=<https://your-sonarqube-server.com>
     sonar.sources=.
     sonar.language=js
   ```
