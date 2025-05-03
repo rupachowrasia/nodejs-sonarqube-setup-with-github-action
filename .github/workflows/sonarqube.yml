@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # GitHub Action to run SonarQube scan
+      # GitHub Action to run SonarQube scan, Replace Container Action with a Direct CLI Call 
       - name: Run SonarQube Scan
         run: | 
           sonar-scanner -Dsonar.login=${{ secrets.SONAR_TOKEN }}

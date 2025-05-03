@@ -1,11 +1,14 @@
 # Setup SonarQube for a Node.js project with Github Action
 
 > This sample app demonstrate how to set up SonarQube with GitHub Actions for a Node.js project.
+> - We will be installing SonarQube on local machine.
+> - Install SonarScanner globally in local.
+> - We will be using Self-Hosted GitHub Runner, which lets GitHub Actions use localhost to access your local SonarQube server. 
+    - Go to your GitHub repo: Settings → Actions → Runners → New self-hosted runner
 
 ## 🚨 Important: GitHub Actions Cannot Access Your Localhost
 
-- If you're running GitHub Actions, localhost refers to the GitHub runner — not your machine.
-- If you’re using a self-hosted SonarQube on your laptop and try to run analysis from GitHub Actions, localhost will not work, because GitHub Actions runs on GitHub-hosted VMs, not your machine.
+- If you’re using a self-hosted SonarQube on your machine and try to run analysis from GitHub Actions, localhost will not work, because GitHub Actions runs on GitHub-hosted VMs, not your machine.
 - ✅ Solution Options:
     - Option 1: Use SonarCloud (Recommended for GitHub)
     - Option 2: Host SonarQube on a Public Server or Cloud (e.g., GCP, AWS) - You’ll need to deploy SonarQube on a reachable IP or domain and update: sonar.host.url=http://<your-public-ip>:9000
@@ -13,7 +16,7 @@
 
 ## 🛠 Basic Setup - step by step
 
-- You should have a SonarQube server (self-hosted)
+- You should have a SonarQube server (self-hosted, either cloud or local)
 - Setup/Install SonarQube and login with Admin/Admin (If running from local it should run on http://localhost:9000/)
 - After login create SonarQube Token: → My Account → Security → Generate Token
 - Create a new project
