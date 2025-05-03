@@ -27,9 +27,8 @@ jobs:
 
       # GitHub Action to run SonarQube scan
       - name: Run SonarQube Scan
-        run: |
-        sonar-scanner \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: | 
+          sonar-scanner -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
       # GitHub Action to check Quality Gate status after scan
       # - name: Quality Gate Check
