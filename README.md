@@ -11,7 +11,7 @@
 - If you’re using a self-hosted SonarQube on your machine and try to run analysis from GitHub Actions, localhost will not work, because GitHub Actions runs on GitHub-hosted VMs, not your machine.
 - ✅ Solution Options:
     - Option 1: Use SonarCloud (Recommended for GitHub)
-    - Option 2: Host SonarQube on a Public Server or Cloud (e.g., GCP, AWS) - You’ll need to deploy SonarQube on a reachable IP or domain and update: sonar.host.url=http://<your-public-ip>:9000
+    - Option 2: Host SonarQube on a Public Server or Cloud (e.g., GCP, AWS) - You’ll need to deploy SonarQube on a reachable IP or domain and update: sonar.host.url=http://your-public-ip:9000
     - Option 3: Use a Self-Hosted GitHub Runner (Advanced) - Install GitHub Actions runner on your machine (where SonarQube is running), so localhost works as expected.
 
 ## 🛠 Basic Setup - step by step
