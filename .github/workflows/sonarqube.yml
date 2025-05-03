@@ -38,16 +38,3 @@ jobs:
       #   env:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-
-
---------
-
-    steps:
-
-    - name: Run tests with coverage
-      run: npm run test -- --coverage || true
-
-    - name: Run SonarQube analysis
-      run: |
-        sonar-scanner \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
