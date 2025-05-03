@@ -12,7 +12,7 @@
   -   Name: SONAR_TOKEN
   -   value: your generated token
   -   Name: SONAR_HOST_URL
-  -   value: use http://localhost:9000/ 
+  -   value: use http://localhost:9000
 - Create a file called sonar-project.properties and keep it in root of project:
   ```bash
     sonar.projectKey=<YOUR_PROJECT_KEY>
@@ -20,7 +20,7 @@
     sonar.sources=.
     sonar.language=js
   ```
-- Add GitHub Action Workflow (.github/workflows/sonarcloud.yml): code is provided in the Repo.
+- Add GitHub Action Workflow (.github/workflows/sonarqube.yml): code is provided in the Repo.
 
 ## ⚡ Custom Quality Gates
 - In SonarQube UI → Go to your project → Administration → Quality Gates → create your own rules, like:
