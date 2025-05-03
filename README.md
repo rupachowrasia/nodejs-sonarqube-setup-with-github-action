@@ -16,7 +16,7 @@
 - Create a file called sonar-project.properties and keep it in root of project:
   ```bash
     sonar.projectKey=<YOUR_PROJECT_KEY>
-    sonar.host.url=http://localhost:9000/
+    sonar.host.url=http://localhost:9000
     sonar.sources=.
     sonar.language=js
   ```
